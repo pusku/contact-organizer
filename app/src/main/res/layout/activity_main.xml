@@ -1,0 +1,145 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:orientation="vertical"
+    app:layout_collapseParallaxMultiplier="1.0"
+    tools:context="corganizer.puskuuu.com.contactsorganizer.MainActivity"
+    android:weightSum="1">
+
+    <TabHost
+    android:id="@+id/tabHost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_weight="0.10">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/Creator"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/CreatorTitle"
+                    android:layout_width="253dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="0.02"
+                    android:hint="Heading1"
+                    android:text="Contact Creator"
+                    android:textSize="32sp"
+                    tools:gravity="center" />
+
+                <ImageView
+                    android:id="@+id/contactimg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.00"
+                    app:srcCompat="@drawable/no_user" />
+
+                <EditText
+                    android:id="@+id/PersonName"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Contact Name"
+                    android:inputType="textPersonName"
+                    android:text="Contact Name" />
+
+                <EditText
+                    android:id="@+id/PhoneNo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:text="Phone Number" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:text="Email" />
+
+                <EditText
+                    android:id="@+id/PostalAddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:ems="10"
+                    android:hint="Address"
+                    android:inputType="textPostalAddress"
+                    android:text="Postal Address" />
+
+                <Button
+                    android:id="@+id/addbutton"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:enabled="false"
+                    android:text="Add Contact" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/List"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/ListTitle"
+                    android:layout_width="208dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:hint="Heading1"
+                    android:text="Contacts List"
+                    android:textSize="32sp"
+                    tools:gravity="center" />
+
+                <ListView
+                    android:id="@+id/ListView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</TabHost>
+
+
+</LinearLayout>
